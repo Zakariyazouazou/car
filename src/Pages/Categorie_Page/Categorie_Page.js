@@ -23,9 +23,6 @@ const Categorie_Page = ({panier , onclickPanier }) => {
     const [filterVoiture , SetfilterVoiture] = useState(0)
     const [filterVoitureModel , setfilterVoitureModel ] = useState(0)
 
-
-
-
         useEffect(() =>{ 
             SetProduct(Produit)
         })
@@ -87,10 +84,6 @@ const Categorie_Page = ({panier , onclickPanier }) => {
          })
 
 
-
-
-
-
        if(filtrage ==""){
         return  <div className='mt-44 text-center flex justify-center '>
                     <h1 className='text-2xl text-orange-900 font-bold'>Sorry they are nothing here yet....</h1><BiSad className='text-4xl text-orange-900 font-bold'/> 
@@ -112,7 +105,7 @@ const Categorie_Page = ({panier , onclickPanier }) => {
                 clickitabe2 = {ShowFilterConditionvoitureModel}   
           /> 
             <h1 className='text-2xl text-orange-900 font-bold mt-24'>Welcome To All Piece Of {nam}  : </h1> 
-            <div className='flex flex-wrap flex-row mb-28'>
+            <div className='flex flex-wrap flex-row mb-28 MyAllCategorie'>
                  {!filterModelCArs && 
                     filtrage.map(element =>{
                       return<Card
@@ -131,7 +124,7 @@ const Categorie_Page = ({panier , onclickPanier }) => {
                     })
                  }
             </div>  
-            <div className='flex flex-wrap flex-row mb-28'>
+            <div className='flex flex-wrap flex-row mb-28 MyAllCategorie'>
             {filterModelCArs && 
                 filterModelCars.map(element =>{
                  return<Card
@@ -151,7 +144,7 @@ const Categorie_Page = ({panier , onclickPanier }) => {
              }
           </div>  
           {filterModelCArs &&
-            filterModelCars == "" && <div className='mt-44 text-center flex justify-center '>
+            filterModelCars == "" && <div className='mt-44 text-center flex justify-center MyAllCategorie'>
                                         <h1 className='text-2xl text-orange-900 font-bold'>Sorry they are nothing here yet....</h1><BiSad className='text-4xl text-orange-900 font-bold'/> 
                                     </div>
            }

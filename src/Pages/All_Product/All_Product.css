@@ -1,6 +1,7 @@
 @media screen and (max-width: 768px) {
     .MyAllProduct{
         width: 100%;
+        justify-content: center;
     }
 
 }

@@ -3,7 +3,7 @@ import './App.css';
 import {json, Route , Routes} from 'react-router-dom'
 import {Navbarre , Footer , FooterPhone  } from './Sections/SectionsIndex'
 import { Home , Serch, Car_Symbol_Page , All_Product , Categorie_Page , One_Product , Panier , Finish} from './Pages';
-
+import {ScrollToTop} from './Component/Index'
 import 'swiper/css';
 
 
@@ -80,7 +80,8 @@ function App() {
 
   return (
    <div>
-    
+   <ScrollToTop/>
+
      <Navbarre  dataom={dataPanier}  />
         <Routes >
             <Route path='/'  element={<Home  onclickPanier={hendlclick} />} />
